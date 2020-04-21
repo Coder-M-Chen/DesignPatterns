@@ -1,3 +1,5 @@
+/* 单例模式，饿汉式、懒汉式，懒汉式须线程安全处理 */
+
 #include <iostream>
 #include <atomic>
 #include <mutex>
@@ -39,9 +41,11 @@ public:
 };
 
 int main() {
-	Singleton * pInstance = Singleton::getInstance();
-	if (pInstance != nullptr) {
-		pInstance->func();
+	{
+		Singleton * pInstance = Singleton::getInstance();
+		if (pInstance != nullptr) {
+			pInstance->func();
+		}
 	}
 
 	system("pause");

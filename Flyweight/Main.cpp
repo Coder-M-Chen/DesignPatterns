@@ -1,3 +1,5 @@
+/* 享元模式，池技术，对象共享 */
+
 #include <iostream>
 #include <map>
 #include <string>

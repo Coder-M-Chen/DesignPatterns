@@ -128,18 +128,20 @@ void NightState::ChangeState(Person * person) {
 }
 
 int main() {
-	Person p;
-	p.Work();
-	p.Eat();
-	p.Run();
+	{
+		Person p;
+		p.Work();
+		p.Eat();
+		p.Run();
 
-	p.Eat();
-	p.Run();
-	p.Work();
+		p.Eat();
+		p.Run();
+		p.Work();
 
-	p.Eat();
-	p.Work();
-	p.Run();
+		p.Eat();
+		p.Work();
+		p.Run();
+	}
 
 	system("pause");
 	return 0;

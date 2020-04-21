@@ -124,15 +124,17 @@ public:
 	}
 };
 int main() {
-	ClothesFactory * workFacktor = new WorkClothesFactory();
-	ClothesShop csw(workFacktor);
-	csw.getClothes();
-	csw.show();
+	{
+		ClothesFactory * workFacktor = new WorkClothesFactory();
+		ClothesShop csw(workFacktor);
+		csw.getClothes();
+		csw.show();
 
-	ClothesFactory * sportFactory = new SportClothesFactory();
-	ClothesShop css(sportFactory);
-	css.getClothes();
-	css.show();
+		ClothesFactory * sportFactory = new SportClothesFactory();
+		ClothesShop css(sportFactory);
+		css.getClothes();
+		css.show();
+	}
 
 	system("pause");
 	return 0;

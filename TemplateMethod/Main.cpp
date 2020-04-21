@@ -1,5 +1,4 @@
-// 模板方法
-// 基类固定流程，派生实现细节
+/* 模板方法，基类固定流程，派生实现细节 */
 
 #include <iostream>
 using namespace std;
@@ -31,6 +30,11 @@ public:
 };
 
 int main() {
-	A * p = new B();
-	p->Run();
+	{
+		A * p = new B();
+		p->Run();
+	}
+
+	system("pause");
+	return 0;
 }

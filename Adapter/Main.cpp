@@ -39,14 +39,16 @@ public:
 };
 
 int main() {
-	CharLow * cl = new CharLow();
-	CharAdapterLow2Cap cAdapter(cl);
-	cout << "CharAdapterLow2Cap::get():" << endl;
-	for (int i = 1; i <= 26; i++) {
-		cout << " " << cAdapter.get(i);
-		if (i % 4 == 0)cout << endl;
+	{
+		CharLow * cl = new CharLow();
+		CharAdapterLow2Cap cAdapter(cl);
+		cout << "CharAdapterLow2Cap::get():" << endl;
+		for (int i = 1; i <= 26; i++) {
+			cout << " " << cAdapter.get(i);
+			if (i % 4 == 0)cout << endl;
+		}
+		cout << endl;
 	}
-	cout << endl;
 
 	system("pause");
 	return 0;

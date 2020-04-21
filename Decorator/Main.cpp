@@ -1,4 +1,4 @@
-/* 数字、汉字、英文做加粗、斜体、下划线处理 */
+/* 装饰模式，通过叠加完成功能的组合，数字、汉字、英文做加粗、斜体、下划线处理 */
 
 #include <iostream>
 
@@ -73,21 +73,23 @@ public:
 };
 
 int main() {
-	Number * n = new Number();
-	Chinese * c = new Chinese();
-	English * e = new English();
+	{
+		Number * n = new Number();
+		Chinese * c = new Chinese();
+		English * e = new English();
 
-	DealB * pDb = new DealB(n);
-	pDb->GetText();
+		DealB * pDb = new DealB(n);
+		pDb->GetText();
 
-	DealI * pDi = new DealI(c);
-	pDb->GetText();
+		DealI * pDi = new DealI(c);
+		pDb->GetText();
 
-	DealU * pDu = new DealU(e);
-	pDu->GetText();
+		DealU * pDu = new DealU(e);
+		pDu->GetText();
 
-	DealU * pDu2 = new DealU(pDb);
-	pDu2->GetText();
+		DealU * pDu2 = new DealU(pDb);
+		pDu2->GetText();
+	}
 
 	system("pause");
 	return 0;

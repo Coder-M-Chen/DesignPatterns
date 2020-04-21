@@ -104,16 +104,18 @@ public:
 };
 
 int main() {
-	FactoryMethod * pWordFactory = new WordFactoryMethod();
-	
-	WpsWindows ww(pWordFactory);  // 运行时绑定
+	{
+		FactoryMethod * pWordFactory = new WordFactoryMethod();
 
-	ww.CreateFile();
-	ww.CreateFile();
-	ww.open();
-	ww.close();
-	ww.open();
-	ww.delFile();
+		WpsWindows ww(pWordFactory);  // 运行时绑定
+
+		ww.CreateFile();
+		ww.CreateFile();
+		ww.open();
+		ww.close();
+		ww.open();
+		ww.delFile();
+	}
 
 	system("pause");
 	return 0;

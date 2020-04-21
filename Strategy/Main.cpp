@@ -1,3 +1,5 @@
+/* 策略模式，将对象的行为通过策略进行区分，使程序通过统一的接口访问对应的策略算法 */
+
 #include <iostream>
 
 using namespace std;
@@ -51,14 +53,16 @@ public:
 };
 
 int main() {
-	Context a('a');
-	Context b('B');
-	Context c('c');
-	a.Run();
-	cout << endl;
-	b.Run();
-	cout << endl;
-	c.Run();
+	{
+		Context a('a');
+		Context b('B');
+		Context c('c');
+		a.Run();
+		cout << endl;
+		b.Run();
+		cout << endl;
+		c.Run();
+	}
 
 	system("pause");
 	return 0;

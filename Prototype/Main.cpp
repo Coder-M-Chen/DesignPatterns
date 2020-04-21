@@ -1,3 +1,5 @@
+/* 原型模式，对同一个原型克隆生成新对象，常用于有中间态的对象 */
+
 #include <iostream>
 using namespace std;
 
@@ -43,17 +45,19 @@ public:
 };
 
 int main() {
-	Prototype * pp = new ConcretePrototypeA();
-	pp->status();
+	{
+		Prototype * pp = new ConcretePrototypeA();
+		pp->status();
 
-	cout << "clone:" << endl;
-	Prototype * pt = pp->clone();
-	pt->status();
-	pt->change();
-	pt->status();
+		cout << "clone:" << endl;
+		Prototype * pt = pp->clone();
+		pt->status();
+		pt->change();
+		pt->status();
 
-	cout << "Prototype:" << endl;
-	pp->status();
+		cout << "Prototype:" << endl;
+		pp->status();
+	}
 
 	system("pause");
 	return 0;

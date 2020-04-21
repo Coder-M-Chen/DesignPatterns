@@ -1,3 +1,5 @@
+/* 观察者模式，订阅发布 */
+
 #include <iostream>
 #include <vector>
 
@@ -49,17 +51,19 @@ public:
 };
 
 int main() {
-	Doing d;
-	ConcreteObserver1 ob1;
-	ConcreteObserver2 ob2;
-	d.AddObserver(&ob1);
-	d.AddObserver(&ob2);
+	{
+		Doing d;
+		ConcreteObserver1 ob1;
+		ConcreteObserver2 ob2;
+		d.AddObserver(&ob1);
+		d.AddObserver(&ob2);
 
-	d.SetProgress(5);
-	d.SetProgress(14);
-	d.SetProgress(55);
-	d.SetProgress(87);
-	d.SetProgress(100);
+		d.SetProgress(5);
+		d.SetProgress(14);
+		d.SetProgress(55);
+		d.SetProgress(87);
+		d.SetProgress(100);
+	}
 
 	system("pause");
 	return 0;

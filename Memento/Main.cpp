@@ -42,17 +42,19 @@ public:
 };
 
 int main() {
-	Originator o;
-	Memento m;
+	{
+		Originator o;
+		Memento m;
 
-	o.Save(&m);
-	o.Save(&m);
-	o.Save(&m);
-	o.RollBack(&m);
-	o.Save(&m);
-	o.Save(&m);
-	o.RollBack(&m);
-	o.RollBack(&m);
+		o.Save(&m);
+		o.Save(&m);
+		o.Save(&m);
+		o.RollBack(&m);
+		o.Save(&m);
+		o.Save(&m);
+		o.RollBack(&m);
+		o.RollBack(&m);
+	}
 
 	system("pause");
 	return 0;

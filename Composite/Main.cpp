@@ -46,21 +46,23 @@ public:
 };
 
 int main() {
-	Box bRoot;
-	Box bComposite;
-	Sth s1(2);
-	Sth s2(3);
-	Sth s3(4);
-	Sth s4(5);
+	{
+		Box bRoot;
+		Box bComposite;
+		Sth s1(2);
+		Sth s2(3);
+		Sth s3(4);
+		Sth s4(5);
 
-	bRoot.AddSth(&s1);
-	bRoot.AddSth(&s2);
-	bComposite.AddSth(&s3);
-	bComposite.AddSth(&s4);
-	bRoot.AddSth(&bComposite);
+		bRoot.AddSth(&s1);
+		bRoot.AddSth(&s2);
+		bComposite.AddSth(&s3);
+		bComposite.AddSth(&s4);
+		bRoot.AddSth(&bComposite);
 
-	int w = bRoot.Weight();
-	cout << w << endl;
+		int w = bRoot.Weight();
+		cout << w << endl;
+	}
 
 	system("pause");
 	return 0;

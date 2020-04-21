@@ -1,3 +1,5 @@
+/* 生成器模式，将完整的对象构造过程拆成若干个子过程进行构造，通过接口返回完整的对象 */
+
 #include <iostream>
 using namespace std;
 
@@ -105,17 +107,19 @@ public:
 };
 
 int main() {
-	cout << "Monday, Lessons list:" << endl;
-	LessonsList * listMon = new LessonsListMonday();
-	Director dm(listMon);
-	Lessons * lm = dm.Construct();
-	lm->show();
+	{
+		cout << "Monday, Lessons list:" << endl;
+		LessonsList * listMon = new LessonsListMonday();
+		Director dm(listMon);
+		Lessons * lm = dm.Construct();
+		lm->show();
 
-	cout << "Tuesday, Lessons list:" << endl;
-	LessonsList * listTue = new LessonsListTuesday();
-	Director dt(listTue);
-	Lessons * lt = dt.Construct();
-	lt->show();
+		cout << "Tuesday, Lessons list:" << endl;
+		LessonsList * listTue = new LessonsListTuesday();
+		Director dt(listTue);
+		Lessons * lt = dt.Construct();
+		lt->show();
+	}
 
 	system("pause");
 	return 0;
